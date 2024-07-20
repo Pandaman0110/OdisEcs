@@ -1,0 +1,14 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "CMakeFiles\\OdisECS.dir\\main.cpp.obj",
+            "outputs": [
+                "C:\\Users\\Shanc\\CLionProjects\\OdisECS\\cmake-build-debug-visual-studio\\vc140.pdb",
+                "CMakeFiles\\OdisECS.dir\\main.cpp.obj.ddi"
+            ],
+            "requires": []
+        }
+    ]
+}

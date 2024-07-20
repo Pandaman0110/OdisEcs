@@ -1,0 +1,3 @@
+C:/Users/Shanc/CLionProjects/OdisECS/cmake-build-debug/CMakeFiles/OdisECS.dir
+C:/Users/Shanc/CLionProjects/OdisECS/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Shanc/CLionProjects/OdisECS/cmake-build-debug/CMakeFiles/rebuild_cache.dir
