@@ -16,6 +16,11 @@ struct velocity
 	float x, y;
 };
 
+struct chunk_data
+{
+	std::byte* data;
+};
+
 int main()
 {
     std::cout << "odis ecs test\n";
@@ -31,19 +36,18 @@ int main()
 
 	auto allocator = std::allocator<std::byte>{};
 
-	constexpr auto buffer_size = 64;
+	constexpr auto buffer_size = 4096;
+	constexpr uint8_t max_chunks = std::numeric_limits<uint8_t>::max();
 
     auto buffer = allocator.allocate(buffer_size);
 
-	std::cout << &buffer << std::endl;
+	
 
-	auto* int_ptr = new(buffer) uint32_t[buffer_size / sizeof(uint32_t)]{};
+	std::array<std::byte, max_chunks> chunks{};
 
-	int_ptr[15] = 5;
 
-	std::cout << int_ptr[1] << std::endl;
 
-	allocator.deallocate(buffer, 64);
+	allocator.deallocate(buffer, buffer_size);
 
 	odis::world world;
 
@@ -52,7 +56,10 @@ int main()
 	world.emplace_back(velocity{1.0f, 0.0f}, float{});
 	world.emplace_back(int{3});
 
-
+    for (auto chunk: chunks)
+    {
+	    
+    }
 
     return 0;
 
